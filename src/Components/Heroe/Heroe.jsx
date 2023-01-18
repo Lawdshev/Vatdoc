@@ -1,9 +1,16 @@
 import React from 'react';
-import heroStyles from './Heroe.module.css'
+import { useState } from 'react';
+import heroStyles from './Heroe.module.css';
+import video from '../../assets/VATDOC.mkv'
 
 function Heroe() {
+  const [play,setPlay] = useState(true);
+
     return (
-      <div className={`${heroStyles.container} 4xl:mt-0 `} >
+      <>
+        {
+          !play?
+          <div className={`${heroStyles.container} 4xl:mt-0 `} >
           <div className={heroStyles.overlay}>
             <div className={` md:[w-70%] xl:w-[60%] px-4 h-[80%] lg:h-[66%] ml-[6%] flex flex-col justify-around ${heroStyles.textCont}`}>
               <h1 className={`w-[100%] lg:w-[75%] font-openSans text-[18px] md:text-[36px] 3xl:text-[44px] 4xl:text-[58px] 3xl:leading-[55px] 4xl:leading-[70px] font-[700] md:leading-[49px] text-white ${heroStyles.heroHead}`}>Have a Firmer grip and access control on all documents irrespective... </h1>
@@ -15,6 +22,13 @@ function Heroe() {
             </div>
           </div>
       </div>
+        :
+        <div className={`${heroStyles.container} mt-0 4xl:mt-0 `} >
+          <video src={video} width='100%' height='90%' controls></video>
+        </div>
+      }
+      </>
+      
     )
 }
 export default Heroe;
