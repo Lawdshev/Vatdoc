@@ -34,10 +34,10 @@ function Navbar() {
     </div>
     {/* //md above */}
     <div className='bg-black w-[100vw] px-[5%] py-[1.5vh] xl:py-[3vh] z-[200] md:fixed top-0 left-0 right-0 largeNav hidden landscape:flex md:flex justify-between '>
-        <Link to='/' className=' w-[30%] '>
+        <Link to='/' className=' w-[30%] largeLogo'>
             <img src={logo} className=" "/>
         </Link>
-        <div className=' md:w-[60%] xl:w-[55%] flex justify-between items-center '>
+        <div className=' md:w-[60%] xl:w-[55%] flex justify-between items-center bg-yellow-500 navsLandscape '>
             <div className="navItemsDiv2 cursor-pointer w-[60%] " onClick={toggleNavbar}>
                     <a href='#about' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>About</a>
                     <a href='#blog' className='navItems 3xl:text-[24px] 4xl:text-[30px]'>Blog</a>
