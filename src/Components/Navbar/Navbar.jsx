@@ -37,7 +37,7 @@ function Navbar() {
         <Link to='/' className=' w-[30%] largeLogo'>
             <img src={logo} className=" "/>
         </Link>
-        <div className=' md:w-[60%] xl:w-[55%] flex justify-between items-center bg-yellow-500 navsLandscape '>
+        <div className=' md:w-[60%] xl:w-[55%] flex justify-between items-center navsLandscape '>
             <div className="navItemsDiv2 cursor-pointer w-[60%] " onClick={toggleNavbar}>
                     <a href='#about' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>About</a>
                     <a href='#blog' className='navItems 3xl:text-[24px] 4xl:text-[30px]'>Blog</a>
