@@ -11,7 +11,7 @@ function AboutUs() {
         </div>
         <div className='flex flex-col md:px-8 px-4 h-[60%] md:h-[48%] lg:w-[60%] xl:w-[50%] lg:h-[70%] xl:h-[70%] 3xl:h-[60%] landscape:h-[30%]'>
           <div className='flex flex-col'>
-            <h3 className='font-bold font-openSans text-[#142C14] text-[16px] md:text-[24px] self-center leading-[24px] md:leading-[32px] mt-[3%] 2xl:text-[38px] 2xl:leading-[150%] 4xl:text-[46px]'>About us</h3>
+            <h3 className='font-bold font-openSans text-[#142C14] text-[16px] md:text-[24px] lg:text-[28px] self-center leading-[24px] md:leading-[32px] mt-[3%] 2xl:text-[38px] 2xl:leading-[150%] 4xl:text-[46px]'>ABOUT US</h3>
             <h1 className='text-[#142C14] font-bold font-openSans text-[24px] md:text-[38px] xl:text-[40px] leading-[30px] md:leading-[40px] xl:leading-[54px] mt-[3%] md:mt-[1%] text-center lg:text-start 2xl:text-[50px] 2xl:leading-[160%] 3xl:tex'>Overview Of Our <span className='text-[#1FBE54]'> Product </span></h1>
           </div>
           <p className='text-[15px] md:text-[18px] lg:text-[20px] md:leading-[27px] font-openSans font-normal leading-[21px] 2xl:text-[28px] 2xl:leading-[160%] 3xl:text-[34px] 4xl:text-[38px]  mt-[5%]'>EDMS™ is a document archiving system to be used for storing scanned document and help to track retention policies defined around each documents. Throughout the application, certain features and elements are used. Understanding these features and elements will help you use the software more effectively.</p> 
