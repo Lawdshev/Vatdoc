@@ -19,6 +19,7 @@ import { Link } from 'react-router-dom';
 import vector5 from '../assets/Vector5.png';
 import conEllipse from '../assets/conn ellipse.png';
 import conEllipse2 from '../assets/conn Ellipse 2.png'
+import CarouselSlide from '../Components/Slider';
 
 
 const features=[
@@ -129,17 +130,11 @@ function Index() {
 
         {/* comment */}
         <div  className={`h-[40vh] md:h-[30vh] border-b-[1.5px] border-b-solid border-b-[#04E761] lg:h-[400px] xl:h-[60vh] flex  w-full items-center justify-center mx-auto ${indexStyles.comment} `}>
-        <div className={`h-[40vh] md:h-[30vh] lg:h-[400px] xl:h-[60vh] flex w-full items-center justify-center mx-auto ${indexStyles.commentOverlay} `}>
-           <div className='flex flex-col lg:w-[55%] h-[80%] md:h-[60%] xl:h-[80%] xl:w-[65%] justify-between px-[1%] '>
-                <div>
-                    <img src={vector5} className='2xl:w-[7%]'/>
-                </div>
-                <div className='h-[70%] md:h-[80%] flex flex-col justify-between mx-auto'>
-                    <p className=' mt-[1%] px-2 self-center italic text-[16px] md:w-[80%] xl:w-[70%] xl:h-[80%] md:text-[20px] font-[400] md:leading-[27px] xl:leading-[40px] font-openSans 2xl:text-[28px] 2xl:leading-[56px] 3xl:text-[33px] 3xl:leading-[60px] 4xl:text-[43px] 4xl:leading-[80px] 5xl:text-[48px] 5xl:leading-[90px]'>
-                        With VatDoc we have been able to manage all our workflow with regards to documents, most especially the archiving of documents that could ordinarily be lost if paper-archived. 
-                    </p>
-                    <p className='text-[#1FBE54] mt-[3%] text-center font-openSans font-[700] text-[20px] leading-[27px] 2xl:text-[28px] 2xl:leading-[56px] 3xl:text-[26px] 3xl:leading-[60px] 4xl:text-[36px] 4xl:leading-[70px] xl:h-[20%]  5xl:text-[40px] 5xl:leading-[80px]'>- Sunny Ikegbulam </p>
-                </div>
+        <div className={`h-[40vh] md:h-[30vh] lg:h-[400px] xl:h-[60vh] flex w-full items-center justify-center mx-auto ${indexStyles.commentOverlay}`}>
+            <CarouselSlide/>
+           <div className='h-full flex justify-around items-center text-[30px] bg-blue-600 '>
+                <i className="fa-solid fa-arrow-left-long mr-[20px] text-[#BFBFBF59] cursor-pointer" ></i>
+                <i className="fa-solid fa-arrow-right-long ml-[20px] text-[#1FBE54] cursor-pointer"></i>
            </div>
            <div>
            </div>
@@ -165,7 +160,7 @@ function Index() {
         <div className='bg-[#C4F4D7] h-[20vh] lg:h-[100px] xl:h-[30vh] relative flex items-center justify-center landscape:h-[150px] ' >
             {/* <div className='h-[50%] w-[95%] md:w-[50%] bg-green-400 2xl:w-[20vw]  flex flex-col lg:flex-row items-center justify-around  landscape:flex-row landscape:justify-around landscape:w-[60%] lg:landscape:w-[50%] '> */}
             <div className=' h-[50%] w-full lg:w-[60%] xl:w-[40%] flex flex-col lg:flex-row items-center justify-around lg:justify-start text-center lg:ml-[10%]'>
-                 <h1 className={` ${indexStyles.patnertext} text-[#142C14] w-[70%] text-[16px] md:text-[24px] font-openSans font-semibold 2xl:text-[30px]  landscape:text-[20px] lg:landscape:text-[30px]`}>Want to become our partner?</h1>
+                 <h1 className={` ${indexStyles.patnertext} text-[#142C14] w-[70%] text-[16px] md:text-[24px] font-openSans font-semibold 2xl:text-[30px] z-20 landscape:text-[20px] lg:landscape:text-[25px]`}>Want to become our partner?</h1>
                  <button className='bg-[#04E761] w-[25%] z-[15] md:w-[20%] lg:w-[25%] text-white py-[1%] 3xl:py-[2%] text-[14px] md:text-[16px] 2xl:text-[20px] font-openSans rounded-[5px] 3xl:text-[24px] 4xl:text-[28px] hover:bg-[#1FBE54]'>Contact Us</button>
             </div>
             <img src={conEllipse}  className='absolute top-0 z-10 left-[10%]'/>

@@ -23,7 +23,7 @@ function Navbar() {
         <div className={sidebar ? 'nav active' : 'nav'}>
             <div className='navbars'>
                 <div className="navItemsDiv cursor-pointer" onClick={toggleNavbar}>
-                    <a href='#about' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>About</a>
+                    <Link to='/about' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>About</Link>
                     <a href='#blog' className='navItems 3xl:text-[24px] 4xl:text-[30px]'>Blog</a>
                     <a href='#contact' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>Contact</a>
                     <a href='#faq' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>FAQ</a>
@@ -39,7 +39,7 @@ function Navbar() {
         </Link>
         <div className=' md:w-[60%] xl:w-[55%] flex justify-between items-center navsLandscape '>
             <div className="navItemsDiv2 cursor-pointer w-[60%] " onClick={toggleNavbar}>
-                    <a href='#about' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>About</a>
+                    <Link to='/about' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>About</Link>
                     <a href='#blog' className='navItems 3xl:text-[24px] 4xl:text-[30px]'>Blog</a>
                     <a href='#contact' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>Contact</a>
                     <a href='#faq' className='navItems 3xl:text-[24px]  4xl:text-[30px]'>FAQ</a>
