@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import Heroe from '../Components/Heroe/Heroe'
 import connect from '../assets/Desktop - 7.png'
 import BlogCard from '../Components/BlogCard'
@@ -16,7 +16,7 @@ import indexStyles from '../styles/index.module.css';
 import hand from '../assets/hand-using-computer.png';
 import vector from '../assets/Vector6.png'
 import { Link } from 'react-router-dom';
-import vector5 from '../assets/Vector5.png';
+import useForceUpdate from 'use-force-update';
 import conEllipse from '../assets/conn ellipse.png';
 import conEllipse2 from '../assets/conn Ellipse 2.png'
 import CarouselSlide from '../Components/Slider';
@@ -74,6 +74,28 @@ const blogs =[
 ]
 
 function Index() {
+    const slideref = useRef();
+    const [prevColor,setPrevColor] = useState('#BFBFBF59')
+    const [nextColor,setNextColor] = useState('#1FBE54');
+
+    const prev = () =>{
+        setNextColor('#1FBE54')
+        slideref.current.previous()
+        console.log( slideref.current)
+        if(slideref.current.state.currentSlide === 1) {
+            setPrevColor('#BFBFBF59')
+        }
+    }
+    
+    const next = () => {
+        setPrevColor('#1FBE54');
+        slideref.current.next(); 
+        if(slideref.current.state.currentSlide === slideref.current.state.totalItems - 2) {
+            setNextColor('#BFBFBF59')
+        }
+        
+    }
+    
   return (
     <div  >
         <Heroe/>
@@ -129,12 +151,12 @@ function Index() {
         </div>
 
         {/* comment */}
-        <div  className={`h-[40vh] md:h-[30vh] border-b-[1.5px] border-b-solid border-b-[#04E761] lg:h-[400px] xl:h-[60vh] flex  w-full items-center justify-center mx-auto ${indexStyles.comment} `}>
-        <div className={`h-[40vh] md:h-[30vh] lg:h-[400px] xl:h-[60vh] flex w-full items-center justify-center mx-auto ${indexStyles.commentOverlay}`}>
-            <CarouselSlide/>
-           <div className='h-full flex justify-around items-center text-[30px] bg-blue-600 '>
-                <i className="fa-solid fa-arrow-left-long mr-[20px] text-[#BFBFBF59] cursor-pointer" ></i>
-                <i className="fa-solid fa-arrow-right-long ml-[20px] text-[#1FBE54] cursor-pointer"></i>
+        <div  className={`h-[40vh] md:h-[30vh] border-b-[1.5px] border-b-solid border-b-[#04E761] lg:h-[400px] xl:h-[60vh] flex w-full items-center justify-center mx-auto ${indexStyles.comment} `}>
+        <div className={`h-[40vh] md:h-[30vh] lg:h-[400px] xl:h-[60vh] flex flex-col lg:flex-row  w-full items-center justify-center  ${indexStyles.commentOverlay}`}>
+            <CarouselSlide slideref={slideref} />
+           <div className='lg:h-full flex justify-around items-center text-[30px]'>
+                <i className="fa-solid fa-arrow-left-long mr-[20px] cursor-pointer" onClick={prev} style={{color:`${prevColor}`}}></i>
+                <i className="fa-solid fa-arrow-right-long ml-[20px] text-[#1FBE54] cursor-pointer" onClick={next} style={{color:`${nextColor}`}}></i>
            </div>
            <div>
            </div>
